@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.lifecycle.lifecycleScope
-import com.pensource.data.CapitalizeText
+import ru.petshop.data.CapitalizeText
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         }
         lifecycleScope.launch(Dispatchers.IO) {
                     api.getCoins(0)
-                    delay(2000)
+                    delay(4000)
                     launch(Dispatchers.Main) {
                         findViewById<TextView>(R.id.title_tv).text = capitalizeText.capitalize("data is loaded!")
                     }

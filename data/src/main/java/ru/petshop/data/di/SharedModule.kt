@@ -1,6 +1,6 @@
 package ru.petshop.data.di
 
-import com.pensource.data.CapitalizeText
+import ru.petshop.data.CapitalizeText
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
